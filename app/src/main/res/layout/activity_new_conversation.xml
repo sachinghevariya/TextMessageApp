@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.NewConversationActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/threadToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        app:titleTextColor="@color/textColor"
+        app:titleTextAppearance="@style/ToolbarTitleTextSemiBold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/fl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/fl_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:gravity="center|start"
+                    android:hint="@string/title_compose"
+                    android:imeOptions="flagNoExtractUi"
+                    android:includeFontPadding="false"
+                    android:inputType="textNoSuggestions"
+                    android:maxLines="1"
+                    android:padding="@dimen/_6sdp"
+                    android:privateImeOptions="nm"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColorSub"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ImageView
+                    android:id="@+id/cancel"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/ic_close"
+                    android:visibility="gone"
+                    app:tint="?android:attr/textColorSecondary" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivDial"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_dial" />
+
+                <ImageView
+                    android:id="@+id/ivKeyboard"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_keyboard"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/threadToolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvContacts"
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/banner_ad_container"
+            android:layout_height="0dp" />
+
+
+        <include
+            android:id="@+id/banner_ad_container"
+            layout="@layout/ad_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/banner_ad_height"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

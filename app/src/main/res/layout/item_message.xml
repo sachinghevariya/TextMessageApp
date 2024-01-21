@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/thread_message_holder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:foreground="@drawable/selector"
+    android:paddingHorizontal="@dimen/_16sdp">
+
+    <RelativeLayout
+        android:id="@+id/thread_date_time_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <TextView
+            android:id="@+id/thread_date_time"
+            android:layout_width="wrap_content"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:includeFontPadding="false"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/textColor"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textSize="@dimen/_9ssp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            tools:text="13 March, 13:30" />
+
+        <ImageView
+            android:id="@+id/thread_sim_icon"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/thread_date_time"
+            android:layout_alignBottom="@id/thread_date_time"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_toStartOf="@id/thread_date_time"
+            android:src="@drawable/ic_sim_vector" />
+
+        <TextView
+            android:id="@+id/thread_sim_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:includeFontPadding="false"
+            android:layout_alignStart="@+id/thread_sim_icon"
+            android:layout_alignTop="@+id/thread_sim_icon"
+            android:layout_alignEnd="@+id/thread_sim_icon"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_11ssp"
+            android:layout_alignBottom="@+id/thread_sim_icon"
+            android:gravity="center"
+            tools:text="1" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/thread_message_wrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thread_date_time_holder"
+        app:layout_constraintWidth_percent="0.8">
+
+        <TextView
+            android:id="@+id/msg_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:includeFontPadding="false"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="@dimen/_2sdp"
+            android:singleLine="true"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_7ssp"
+            tools:text="13:30" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/threadMessageBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/msg_date_time"
+            android:layout_marginVertical="@dimen/_2sdp"
+            android:autoLink="email|web"
+            android:drawablePadding="8dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:includeFontPadding="false"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_11ssp"
+            tools:text="Message content" />
+
+        <ImageView
+            android:id="@+id/ivStar"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            android:src="@drawable/ic_starred" />
+
+        <TextView
+            android:id="@+id/thread_sending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:includeFontPadding="false"
+            android:layout_below="@+id/threadMessageBody"
+            android:text="@string/sending"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_9ssp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

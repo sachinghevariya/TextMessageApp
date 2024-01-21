@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.BackupRestoreActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/threadToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/textColor">
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/backup_restore"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_17ssp" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/threadToolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@+id/banner_ad_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerProgressView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBackingUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_backingup"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="start"
+                android:includeFontPadding="false"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/backing_up_messages"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_12ssp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivBackingUp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="start"
+                android:includeFontPadding="false"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/finished"
+                android:textColor="@color/textColorSub"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivBackingUp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/conversationsPb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:indeterminate="true"
+                android:visibility="visible"
+                app:hideAnimationBehavior="outward"
+                app:indicatorColor="@color/progressColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivBackingUp"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubTitle"
+                app:showAnimationBehavior="inward" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/ivBannerImg"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_backup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/containerProgressView" />
+
+        <TextView
+            android:id="@+id/tvBackup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/backup_amp_restore_messages"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_14ssp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBannerImg" />
+
+        <TextView
+            android:id="@+id/tvBackupMsg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/backup_note"
+            android:textColor="@color/textColorSub"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBackup" />
+
+        <TextView
+            android:id="@+id/tvBackupNote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="@string/backup_note_msg"
+            android:textColor="@color/textColorLightSub"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBackupMsg" />
+
+        <TextView
+            android:id="@+id/btnBackup"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/btn_red"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingHorizontal="@dimen/_2sdp"
+            android:singleLine="true"
+            android:text="@string/backup_now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBackupNote" />
+
+        <TextView
+            android:id="@+id/btnRestore"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingHorizontal="@dimen/_2sdp"
+            android:singleLine="true"
+            android:text="@string/restore"
+            android:textColor="@color/textColorSub"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnBackup" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/banner_ad_container"
+        layout="@layout/ad_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_ad_height"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

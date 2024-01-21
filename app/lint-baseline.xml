@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.1.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.1.2)" variant="fatal" version="8.1.2">
+
+    <issue
+        id="Instantiatable"
+        message="`ScheduledActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.ScheduledActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="35"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`BlockListActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.BlockListActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="38"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`ArchivedActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.ArchivedActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="41"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`FeedbackActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.FeedbackActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="45"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`SettingActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.SettingActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="49"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`SelectLanguageActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.SelectLanguageActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="53"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`SearchActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.SearchActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="57"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`ContactDetailActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.ContactDetailActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="61"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`NewConversationActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.NewConversationActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="65"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`ConversationDetailActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.ConversationDetailActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="69"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`SplashActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.SplashActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="74"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="`MainActivity` must extend android.app.Activity"
+        errorLine1="            android:name=&quot;.ui.activity.MainActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="85"
+            column="27"/>
+    </issue>
+
+</issues>

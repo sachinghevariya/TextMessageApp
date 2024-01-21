@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/bg"
+    tools:context=".ui.activity.FeedbackActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:titleTextAppearance="@style/ToolbarTitleTextSemiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:titleTextColor="@color/textColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/feedback" />
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/containerData"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/banner_ad_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/native_ad_container"
+                layout="@layout/ad_layout_native_medium"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/medium_native_ad_height"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/native_ad_container">
+
+
+                <EditText
+                    android:id="@+id/etFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:background="@drawable/bg_search"
+                    android:focusable="true"
+                    android:gravity="start"
+                    android:hint="@string/feedback_or_suggestion"
+                    android:includeFontPadding="false"
+                    android:inputType="textMultiLine"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:singleLine="false"
+                    android:textColorHint="@color/textColorSub"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginHorizontal="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/btn_red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container">
+
+                <TextView
+                    android:id="@+id/tvSend"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="@string/send"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/white"
+                    android:includeFontPadding="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/banner_ad_container"
+        layout="@layout/ad_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

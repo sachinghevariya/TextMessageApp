@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgnew"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.SettingActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/settings"
+        app:titleTextAppearance="@style/ToolbarTitleTextSemiBold"
+        app:titleTextColor="@color/textColor" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/banner_ad_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btnArchive"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvArchive"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/archives"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnArchive">
+
+                <TextView
+                    android:id="@+id/tvTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/app_theme"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnTheme">
+
+                <TextView
+                    android:id="@+id/tvLang"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/app_language"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_arrow" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnLanguage" />
+
+            <include
+                android:id="@+id/native_ad_container"
+                layout="@layout/ad_layout_native_medium"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="@dimen/medium_native_ad_height"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/native_ad_container">
+
+                <TextView
+                    android:id="@+id/tvDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/display"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/containerPro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDisplay">
+
+                    <LinearLayout
+                        android:id="@+id/containerProfile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toStartOf="@+id/switchProfilePhotos"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvShowProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:includeFontPadding="false"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:text="@string/show_profile_photos"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tvSubShowProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:includeFontPadding="false"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:text="@string/show_profile_photos_and_contacts_info_in_list_view"
+                            android:textColor="@color/textColorSub"
+                            android:textSize="@dimen/_9ssp" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/switchProfilePhotos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/custom_switch_selector"
+                        android:checked="false"
+                        android:theme="@style/SwitchCompatCustom"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/containerNotification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/containerPro">
+
+                    <LinearLayout
+                        android:id="@+id/containerNotificationG"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toStartOf="@+id/switchNotificationGroup"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvShowNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:includeFontPadding="false"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:text="@string/notification_group"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tvSubShowNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:includeFontPadding="false"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:text="@string/automatically_group_sms_notification_together"
+                            android:textColor="@color/textColorSub"
+                            android:textSize="@dimen/_9ssp" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/switchNotificationGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/custom_switch_selector"
+                        android:checked="false"
+                        android:theme="@style/SwitchCompatCustom"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/containerDisplay" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerGroupNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line2">
+
+                <TextView
+                    android:id="@+id/tvNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/notifications"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/containerNot"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNotification">
+
+                    <LinearLayout
+                        android:id="@+id/containerNotText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toStartOf="@+id/switchNotificationMessage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvShowMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:includeFontPadding="false"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:text="@string/show_messages"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tvSubMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:includeFontPadding="false"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:text="@string/sub_msg_notification"
+                            android:textColor="@color/textColorSub"
+                            android:textSize="@dimen/_9ssp" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/switchNotificationMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/custom_switch_selector"
+                        android:checked="false"
+                        android:theme="@style/SwitchCompatCustom"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/btnFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/containerGroupNotification">
+
+                <TextView
+                    android:id="@+id/tvFeedback"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/feedback"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnRateUs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnFeedback">
+
+                <TextView
+                    android:id="@+id/tvRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/rate_us"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnShare"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRateUs">
+
+                <TextView
+                    android:id="@+id/tvShare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/share"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnPrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnShare">
+
+                <TextView
+                    android:id="@+id/tvPolicy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnAbout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnPrivacy">
+
+                <TextView
+                    android:id="@+id/tvAbout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/about_messages"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/subVersionNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/version"
+                    android:textColor="@color/textColorSub"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/banner_ad_container"
+        layout="@layout/ad_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_ad_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

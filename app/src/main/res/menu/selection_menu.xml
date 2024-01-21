@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_pin"
+        android:title="@string/pin"
+        app:actionLayout="@layout/menu_pin"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_unpin"
+        android:title="@string/unpin"
+        app:actionLayout="@layout/menu_unpin"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_archive"
+        android:title="@string/archive"
+        app:actionLayout="@layout/menu_archive"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_unarchive"
+        android:title="@string/unArchive"
+        app:actionLayout="@layout/menu_unarchive"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_delete"
+        android:title="@string/delete"
+        app:actionLayout="@layout/menu_delete"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_read"
+        android:title="@string/markasread"
+        app:actionLayout="@layout/menu_read"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_unread"
+        android:title="@string/markasunread"
+        app:actionLayout="@layout/menu_unread"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_copy"
+        android:title="@string/copy"
+        app:actionLayout="@layout/menu_copy"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_block"
+        android:title="@string/block"
+        app:actionLayout="@layout/menu_block"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_unblock"
+        android:title="@string/unblock"
+        app:actionLayout="@layout/menu_unblock"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_starred"
+        android:title="@string/block"
+        app:actionLayout="@layout/menu_starred"
+        app:showAsAction="always" />
+
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_70sdp"
+    android:layout_margin="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/ivContact"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="@dimen/_4sdp"
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="@dimen/_9ssp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivContact" />
+</androidx.constraintlayout.widget.ConstraintLayout>

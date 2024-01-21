@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:bottom="5dp"
+        android:left="10dp"
+        android:right="13dp"
+        tools:height="50dp"
+        tools:width="50dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/progressColor" />
+        </shape>
+    </item>
+
+    <item
+        android:width="10dp"
+        android:bottom="15dp"
+        android:gravity="left"
+        android:top="10dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/progressColor" />
+        </shape>
+    </item>
+
+    <item
+        android:width="10dp"
+        android:bottom="15dp"
+        android:gravity="right"
+        android:right="5dp"
+        android:top="10dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/progressColor" />
+        </shape>
+    </item>
+
+    <item
+        android:width="10dp"
+        android:height="10dp"
+        android:bottom="5.3dp"
+        android:gravity="bottom|left">
+        <vector
+            android:width="10dp"
+            android:height="10dp"
+            android:viewportWidth="10.0"
+            android:viewportHeight="10.0">
+            <path
+                android:fillColor="@color/progressColor"
+                android:pathData="M0,0 A10,10 0 0,0 10,10 L10,0 Z" />
+        </vector>
+    </item>
+
+    <item
+        android:width="10dp"
+        android:height="10dp"
+        android:gravity="top|right"
+        android:right="5dp">
+        <vector
+            android:width="10dp"
+            android:height="10dp"
+            android:viewportWidth="10.0"
+            android:viewportHeight="10.0">
+            <path
+                android:fillColor="@color/progressColor"
+                android:pathData="M10,10 A10,10 0 0,0 0,0 L0,10 Z" />
+        </vector>
+    </item>
+
+    <item
+        android:width="10dp"
+        android:height="10dp"
+        android:gravity="top|left">
+        <vector
+            android:width="10dp"
+            android:height="10dp"
+            android:viewportWidth="10.0"
+            android:viewportHeight="10.0">
+            <path
+                android:fillColor="@color/progressColor"
+                android:pathData="M10,0 A10,10 0 0,0 0,10 L10,10 Z" />
+        </vector>
+    </item>
+
+    <item
+        android:width="15dp"
+        android:height="15dp"
+        android:gravity="bottom|right">
+        <vector
+            android:width="15dp"
+            android:height="15dp"
+            android:viewportWidth="150.0"
+            android:viewportHeight="150.0">
+            <path
+                android:fillColor="@color/progressColor"
+                android:pathData="M0,100 C7.67309143,100 14.1935201,100.346373 20.500756,99.0996492 C43.6628959,129.872031 94.1698247,146.306561 150.320843,150.792562 C113.168693,130.799632 87.2808993,98.5054948 81.0808824,68.6524321 C94.1277117,51.7595331 100,23.9957121 100,0 L0,0 L0,100 Z" />
+        </vector>
+    </item>
+
+</layer-list>

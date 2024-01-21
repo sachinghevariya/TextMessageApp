@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:bottom="5dp"
+        android:left="13dp"
+        android:right="10dp"
+        tools:height="50dp"
+        tools:width="50dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/msgSelected" />
+        </shape>
+    </item>
+
+    <item
+        android:width="10dp"
+        android:bottom="15dp"
+        android:gravity="left"
+        android:left="5dp"
+        android:top="10dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/msgSelected" />
+        </shape>
+    </item>
+
+    <item
+        android:width="10dp"
+        android:bottom="15dp"
+        android:gravity="right"
+        android:top="10dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/msgSelected" />
+        </shape>
+    </item>
+
+    <item
+        android:width="10dp"
+        android:height="10dp"
+        android:bottom="5.3dp"
+        android:gravity="bottom|right">
+        <vector
+            android:width="10dp"
+            android:height="10dp"
+            android:viewportWidth="10.0"
+            android:viewportHeight="10.0">
+            <path
+                android:fillColor="@color/msgSelected"
+                android:pathData="M0,10 A10,10 0 0,0 10,0 L0,0 Z" />
+        </vector>
+    </item>
+
+    <item
+        android:width="10dp"
+        android:height="10dp"
+        android:gravity="top|right">
+        <vector
+            android:width="10dp"
+            android:height="10dp"
+            android:viewportWidth="10.0"
+            android:viewportHeight="10.0">
+            <path
+                android:fillColor="@color/msgSelected"
+                android:pathData="M10,10 A10,10 0 0,0 0,0 L0,10 Z" />
+        </vector>
+    </item>
+
+    <item
+        android:width="10dp"
+        android:height="10dp"
+        android:gravity="top|left"
+        android:left="5dp">
+        <vector
+            android:width="10dp"
+            android:height="10dp"
+            android:viewportWidth="10.0"
+            android:viewportHeight="10.0">
+            <path
+                android:fillColor="@color/msgSelected"
+                android:pathData="M10,0 A10,10 0 0,0 0,10 L10,10 Z" />
+        </vector>
+    </item>
+
+    <item
+        android:width="15dp"
+        android:height="15dp"
+        android:gravity="bottom|left">
+        <vector
+            android:width="15dp"
+            android:height="15dp"
+            android:viewportWidth="150.0"
+            android:viewportHeight="150.0">
+            <path
+                android:fillColor="@color/msgSelected"
+                android:pathData="M150,100 L150,0 L50,0 C50,11.9054549 52.5180742,22.2130322 55.2200144,32.2289993 C59.25,47.1679688 65.7054859,60.8615415 68.15625,65.5820312 C55.2200144,107.207031 41.7460938,127.800781 0,151 C61.5311854,147.539062 101.691406,129.675781 124.615295,97.6602593 C132.823321,99.8389881 141.106342,100 150,100 Z" />
+        </vector>
+    </item>
+
+</layer-list>

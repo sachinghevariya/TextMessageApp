@@ -1,0 +1,154 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Messages" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseButtonStyle">@style/AppActionModeCloseButton</item>
+        <item name="actionOverflowButtonStyle">@style/AppActionOverflowButton</item>
+        <item name="actionModeStyle">@style/AppActionMode</item>
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.Material3.Light</item>
+        <item name="popupTheme">@style/ThemeOverlay.Material3.Light</item>
+        <item name="android:actionBarPopupTheme">@style/ThemeOverlay.Material3.Light</item>
+        <item name="android:popupTheme">@style/ThemeOverlay.Material3.Light</item>
+<!--        <item name="bg">@color/bg</item>-->
+<!--        <item name="textColor">@color/textColor</item>-->
+<!--        <item name="gray">@color/gray</item>-->
+<!--        <item name="bgBtnColor">@color/gray</item>-->
+<!--        <item name="bgDialog">@color/bgDialog</item>-->
+<!--        <item name="iconColor">@color/black</item>-->
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+<!--        <item name="ad_native_background">@color/ad_native_background</item>-->
+<!--        <item name="ad_native_content_text">@color/ad_native_content_text</item>-->
+    </style>
+
+    <style name="Theme.Messages" parent="Base.Theme.Messages" />
+
+    <style name="Theme.CustomSplashScreenTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_new</item>
+        <item name="windowSplashScreenAnimationDuration">3000</item>
+        <item name="postSplashScreenTheme">@style/Theme.Messages</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+        <item name="android:layout_marginBottom">150dp</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="Theme.Design.BottomSheetDialog">
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">@color/textColorSub</item>
+    </style>
+
+    <style name="CustomDatePickerDialogTheme" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:datePickerStyle">@android:style/Widget.Material.CalendarView</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:datePickerMode">calendar</item>
+        <item name="android:headerBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:weekNumberColor">@color/black</item>
+        <item name="android:calendarTextColor">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:colorControlActivated">@color/colorAccent</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:buttonBarButtonStyle">@style/actionButtonStyle</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="CustomTimePickerDialogTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:timePickerStyle">@style/CustomTimePicker</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorHint">@color/textColorSub</item>
+        <item name="android:timePickerMode">clock</item>
+        <item name="android:headerBackground">@color/white</item>
+        <item name="android:numbersBackgroundColor">@color/white</item>
+        <item name="android:numbersTextColor">@color/black</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:textColorSecondaryInverse">@color/white</item>
+        <item name="android:numbersSelectorColor">@color/colorAccent</item>
+        <item name="android:buttonBarButtonStyle">@style/actionButtonStyle</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorTertiaryInverse">@color/black</item>
+    </style>
+
+    <style name="CustomTimePicker" parent="@android:style/Widget.Material.Light.TimePicker">
+        <item name="android:headerBackground">@color/timePickerHeader</item>
+        <item name="android:numbersBackgroundColor">@color/white</item>
+        <item name="android:numbersTextColor">@color/black</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:textColorSecondaryInverse">@color/white</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:numbersSelectorColor">@color/colorAccent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:buttonBarButtonStyle">@style/actionButtonStyle</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CustomBottomSheetStylenew" parent="@style/Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="actionButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppActionMode" parent="Widget.Material3.ActionMode">
+        <item name="background">@color/bg</item>
+        <item name="titleTextStyle">@style/AppActionModeTitleStyle</item>
+    </style>
+
+    <style name="AppActionModeTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="AppActionModeCloseButton" parent="Widget.AppCompat.ActionButton.CloseMode">
+        <item name="android:tint">@color/colorAccent</item>
+    </style>
+
+    <style name="AppActionOverflowButton" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/colorAccent</item>
+    </style>
+
+    <style name="SwitchCompatCustom" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorForeground">@color/black</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorSwitchThumbNormal">@color/black</item>
+    </style>
+
+    <style name="ToolbarTitleTextBold">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="ToolbarTitleTextSemiBold">
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+
+</resources>

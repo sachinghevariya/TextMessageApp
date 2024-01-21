@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="start"
+            android:text="@string/schedule_send"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_16ssp" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="start"
+            android:text="@string/schedule_sub_title"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_9ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/later_today"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/img_light"
+                    app:layout_constraintEnd_toStartOf="@+id/img_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/img_light" />
+
+                <ImageView
+                    android:id="@+id/img_light"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_sun"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnTonight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/img_dark"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_moon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/later_tonight"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/img_dark"
+                    app:layout_constraintEnd_toStartOf="@id/img_dark"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/img_dark" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnTomorrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/img_default"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_tomorrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/tomorrow"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/img_default"
+                    app:layout_constraintEnd_toStartOf="@id/img_default"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/img_default" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:background="@drawable/line_dash" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnSelectDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:background="@drawable/bg_view_gray"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:includeFontPadding="false"
+                android:text="@string/select_data_and_time"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@id/imgCal"
+                app:layout_constraintEnd_toStartOf="@+id/imgCal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imgCal" />
+
+            <ImageView
+                android:id="@+id/imgCal"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_calender"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp">
+
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/bg_btn"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingHorizontal="@dimen/_13sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorSub"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

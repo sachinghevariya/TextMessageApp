@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conversation_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conversationHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_4sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/conversationRead"
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/conversation_read"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <messenger.chat.sms.app.text.message.messagingapp.schedule.messages.ui.realm.GroupAvatarView
+            android:id="@+id/conversationImage"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@id/conversationRead"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:id="@+id/pin_indicator_l"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignTop="@+id/conversationAddress"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintStart_toEndOf="@id/conversationRead"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/pinIndicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_pin_filled_vector" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/conversationAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:maxLines="1"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textAlignment="viewStart"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textColor="@color/textColor"
+            android:textDirection="ltr"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            app:layout_constraintEnd_toStartOf="@+id/conversationDate"
+            app:layout_constraintStart_toEndOf="@+id/conversationImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="John" />
+
+        <TextView
+            android:id="@+id/conversationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="@string/draft"
+            android:textAlignment="viewStart"
+            android:textColor="@color/textColor"
+            android:textDirection="locale"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="13:30" />
+
+        <TextView
+            android:id="@+id/draftIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/_4sdp"
+            android:text="@string/draft"
+            android:textAlignment="viewStart"
+            android:textColor="@color/progressColor"
+            android:textDirection="locale"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/conversationImage"
+            app:layout_constraintTop_toBottomOf="@+id/conversationAddress" />
+
+        <TextView
+            android:id="@+id/conversationBodyShort"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:maxLines="2"
+            android:textAlignment="viewStart"
+            android:textColor="@color/textColor"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/draftIndicator"
+            app:layout_constraintTop_toBottomOf="@+id/conversationAddress"
+            tools:text="Hey buddy!" />
+
+        <ImageView
+            android:id="@+id/imgSelect"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conversationDate" />
+
+        <ImageView
+            android:id="@+id/ivStar"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            android:src="@drawable/ic_starred"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_3sdp"
+            app:layout_constraintTop_toBottomOf="@id/conversationDate"
+            app:tint="@color/textColorSub" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

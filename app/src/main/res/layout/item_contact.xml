@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemContactFrame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingStart="@dimen/_10sdp"
+    android:paddingTop="@dimen/_6sdp"
+    android:paddingEnd="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_6sdp">
+
+    <ImageView
+        android:id="@+id/itemContactImage"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:padding="@dimen/_2sdp"
+        android:src="@drawable/ic_person_vector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemContactName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:includeFontPadding="false"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:textColor="@color/textColor"
+        android:textDirection="locale"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toTopOf="@+id/itemContactNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemContactImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="John Doe" />
+
+    <TextView
+        android:id="@+id/itemContactNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemContactImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemContactName"
+        app:layout_constraintVertical_bias="0.5"
+        tools:text="0123 456 789" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
